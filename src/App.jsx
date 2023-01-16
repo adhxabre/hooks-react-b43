@@ -16,7 +16,9 @@ function App() {
 
   return (
     <>
-      <h1>{data}</h1>
+      <h1>
+        {data} | {data !== 0 ? "true" : "false"}
+      </h1>
       <button onClick={Inc}>Increment</button>
       <button onClick={Dec}>Decrement</button>
     </>
