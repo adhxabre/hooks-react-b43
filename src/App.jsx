@@ -1,13 +1,24 @@
-import React from "react";
-
-import List from "./components/list";
+import React, { useState } from "react";
 
 function App() {
-  const data = [1, 2, 3, 4];
+  const [data, setData] = useState(0);
+
+  // let data = 0;
+
+  function Inc() {
+    return setData(data + 1);
+  }
+
+  function Dec() {
+    if (data === 0) return;
+    return setData(data - 1);
+  }
 
   return (
     <>
-      <List ListData={data} Chordata="felis catus" />
+      <h1>{data}</h1>
+      <button onClick={Inc}>Increment</button>
+      <button onClick={Dec}>Decrement</button>
     </>
   );
 }
