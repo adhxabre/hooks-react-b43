@@ -1,20 +1,17 @@
 import React from "react";
-import Header from "./components/header";
+
+function getMajor() {
+  return "fullstack";
+}
+
+const companyName = "Dumbways.id";
 
 function App() {
   return (
     <>
-      <Header />
-      <Content />
-    </>
-  );
-}
-
-function Content() {
-  return (
-    <>
-      <h1>This is a content</h1>
-      <button>Click Me</button>
+      <p>
+        Welcome to {getMajor()} class at {companyName}
+      </p>
     </>
   );
 }
