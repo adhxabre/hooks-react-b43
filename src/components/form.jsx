@@ -28,15 +28,15 @@ import cssModules from "./form.module.css";
 
 export default function Form() {
   return (
-    <form className={cssModules.form}>
-      <div className={cssModules.formGroup}>
-        <label htmlFor="username" className={cssModules.formLabel}>
+    <form className="form">
+      <div className="formGroup">
+        <label htmlFor="username" className="formLabel">
           Username
         </label>
         <input
           id="username"
           placeholder="Input username"
-          className={cssModules.formInput}
+          className="formInput"
         />
       </div>
     </form>
