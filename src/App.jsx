@@ -1,17 +1,13 @@
 import React from "react";
 
+import List from "./components/list";
+
 function App() {
-  function Greetings() {
-    return alert("Pagi cuy")
-  }
+  const data = [1, 2, 3, 4];
 
   return (
     <>
-      <h1>Kalo ini di klik, ada message nya cuy</h1>
-      <button onClick={Greetings}>Klik disini cuy</button>
-
-      <h1>Kalo ini di klik, ada message nya cuy</h1>
-      <button onClick={() => alert("Pagi cuy")}>Klik disini cuy</button>
+      <List ListData={data} Chordata="felis catus" />
     </>
   );
 }
