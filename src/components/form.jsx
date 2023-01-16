@@ -2,6 +2,8 @@ import React from "react";
 
 import cssModules from "./form.module.css";
 
+import { Form as Forms, Row, Col } from "react-bootstrap";
+
 // const styles = {
 //   form: {
 //     margin: "16px 20% 0",
@@ -20,25 +22,22 @@ import cssModules from "./form.module.css";
 //     fontSize: "1rem",
 //     lineHeight: 1.5,
 //     color: "#212529",
-//     backgroundColor: "#fff",
-//     border: "1px solid orangered",
-//     borderRadius: ".25rem",
-//   },
+//     backgroundColr
 // };
 
 export default function Form() {
   return (
-    <form className="form">
-      <div className="formGroup">
-        <label htmlFor="username" className="formLabel">
-          Username
-        </label>
-        <input
-          id="username"
-          placeholder="Input username"
-          className="formInput"
-        />
-      </div>
-    </form>
+    <Forms>
+      <Row>
+        <Forms.Group as={Col} md="5">
+          <Forms.Label htmlFppr>Username</Forms.Label>
+          <Forms.Control type="text" placeholder="Your username" required />
+        </Forms.Group>
+        <Forms.Group as={Col} md="5">
+          <Forms.Label>Password</Forms.Label>
+          <Forms.Control type="password" placeholder="Your password" required />
+        </Forms.Group>
+      </Row>
+    </Forms>
   );
 }
