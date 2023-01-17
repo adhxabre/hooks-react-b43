@@ -8,6 +8,8 @@ import Profile from "./pages/Profile";
 import SignIn from "./pages/SignIn";
 import DetailUser from "./pages/DetailUser";
 
+import PrivateRoute from "./components/PrivateRoute";
+
 function App() {
   return (
     <>
@@ -31,10 +33,12 @@ function App() {
       </div>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/profile" element={<Profile />} />
         <Route path="/signin" element={<SignIn />} />
-        <Route path="/detail-user/:id" element={<DetailUser />} />
+        <Route path="/" element={<PrivateRoute />}>
+          <Route path="/about" element={<About />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/detail-user/:id" element={<DetailUser />} />
+        </Route>
       </Routes>
     </>
   );
